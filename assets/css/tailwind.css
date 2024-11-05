@@ -1,0 +1,86 @@
+/* font family */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* tailwind */
+/******************************************************************************/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global */
+/******************************************************************************/
+body {
+  @apply text-base font-normal;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    @apply bg-white text-gray-200;
+  }
+}
+
+*,
+::before,
+::after {
+  background: none;
+}
+
+:focus {
+  outline: 0 !important;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+label,
+small,
+input,
+textarea,
+select,
+button {
+  display: block;
+  width: 100%;
+  flex-basis: max-content;
+}
+
+select {
+  /* -webkit-appearance: none;*/
+  /*-moz-appearance: none; */
+}
+
+button {
+  text-align: left;
+  text-decoration: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+th {
+  font-weight: inherit;
+  text-align: left;
+}
+
+:disabled {
+  cursor: not-allowed;
+}
+
+/* scrollbar */
+/******************************************************************************/
+::-webkit-scrollbar {
+  @apply w-4;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700;
+}
+
